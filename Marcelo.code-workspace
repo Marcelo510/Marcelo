@@ -1,8 +1,15 @@
 {
 	"folders": [
 		{
+			"name": "Marcelo",
+			"path": "C:\\Users\\Marcelo\\source\\Code\\Marcelo"
+		},
+		{
+			"name": "Marcelo",
 			"path": "."
 		}
 	],
-	"settings": {}
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Marcelo"
+	}
 }
