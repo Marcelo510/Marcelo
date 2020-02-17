@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <title>Marcelo</title>
+  </head>
+  <body onload="mueveReloj()">
+    <h1 class="float-right">MARCELO</h1>
+    
+    <a href="https://www.google.com.ar">GOOGLE</a>
+    
+    <form name="form_reloj">
+        <input type="text" name="reloj" size="10">
+        
+        
+    </form>
+    <div >
+
+        <div class="panel-body" >
+
+            <div class="panel-group" id="accordion" style="float: left; width: 220px;">
+                <div class="panel panel-info">
+                    
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse0">Mapa</a>
+                        </h3>
+
+                    </div>
+                    <div id="collapse0" class="panel-collapse collapse in" style="float: right; width: 220px;background-color:chocolate;">
+                        <div class="panel panel-info ">
+                            
+                            <div>
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d13130.711243324875!2d-58.4344577!3d-34.6375814!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sar!4v1579443193362!5m2!1ses!2sar" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                            </div>
+                            
+                            <!-- <div> insertar un video 
+
+                                <object
+                                    type="application/x-shockwave-flash"
+                                    data="https://www.youtube.com/v/vZV-t3KzTpw"
+                                    style="width: 425px; height:350px;">
+                                    <param
+                                        name="movie"
+                                        value="https://www.youtube.com/v/vZV-t3KzTpw">
+                                    ERROR (no puede mostrarse el objeto)
+                                </object>
+                            </div> -->
+                     
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <div>
+                <iframe id="climacontent" src="https://www.accuweather.com/es/ar/buenos-aires/7894/current-weather/7894" frameborder="0"></iframe>
+            </div>
+
+            <div>
+                <a href="http://www.thumbshots.com" target="_blank" title="This site uses Thumbshots previews">This site uses Thumbshots previews</a>
+
+
+
+
+                <img src="http://open.thumbshots.org/image.aspx?url=<?echo urlencode("http://www.guiarte.com/");?>" width=120 height=90 />
+            </div>
+            
+            <div id="destino"></div>
+            <button onclick="cargar()"></button>
+            <script>
+                function cargar(){
+                    var elclima = document.getElementById("climacontent").innerHTML;
+                    var elem = document.getElementById('destino');
+                    elem.innerHTML = elclima.document.getElementsByClassName("temperatures")[1].innerHTML;
+                    
+                }
+                
+                
+                
+            </script>
+
+            <div class="panel-group" id="accordion" style="float: right; width: 220px;">
+                <div class="panel panel-info">
+                    <!--DATOS PERSONA-->
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse1">Tiempos</a>
+                        </h3>
+
+                    </div>
+
+                    <div id="collapse1" class="panel-collapse collapse in" style="float: right; width: 220px;background-color:chocolate;">
+                        <div class="panel panel-info ">
+                            <!-- <input type="text" id="clock" name="reloj" size="10"> -->
+                            <label id="diffechas"></label>
+                            <script>
+                                var f=new Date();
+                                var ano = f.getFullYear();
+                                var mes = f.getMonth();
+                                var dia = f.getDate();
+                                var estiloDia;
+                                var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+                                var diasSemana = new Array("Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado");
+                                var diasMes = new Array(31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31);
+                                var diaMaximo = diasMes[mes];
+                                if (mes == 1 && (((ano % 4 == 0) && (ano % 100 != 0)) || (ano % 400 == 0)))
+                                   diaMaximo = 29;
+                                document.write('<div class="mifecha2">');
+                                document.write('<div class="mesano">' + diasSemana[f.getUTCDay()] + ' ' + 
+                                        dia + ' ' + meses[mes] + ' ' + ano + '</div>');
+                                
+                                for (i=1; i<=diaMaximo; i++){
+                                   if(i == dia)
+                                      estiloDia = "diaactual";
+                                //    else
+                                //       estiloDia = "dia";
+                                //    document.write('<div class="' + estiloDia + '">' + i + '</div>');
+                                }   
+                                document.write('</div>');
+                                </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <style type="text/css">
+        #rss01{width:300px;border-radius:8px;padding:10px;background-color:white;border:2px solid #d4eefd;margin-bottom:1em;margin:6px 0 12px 0;font-size:0.8em;line-height:18px;}
+        #rss01 a{color:#666666;font-weight:bold;}
+        .rss0l {padding:0 0 8px 0;text-align:left;}
+        </style>
+        <script type="text/javascript">
+        google.load('feeds', '1');
+            function initialize() {
+              var feed = new google.feeds.Feed("http://norfipc.com/rss.xml");
+              //feed.setNumEntries(10); //mostrar 10 publicaciones
+              feed.load(function(result) {
+                if (!result.error) {
+                  var container = document.getElementById("rss01");
+                  var html = '';
+                  for (var i = 0; i < result.feed.entries.length; i++) {
+                    var entry = result.feed.entries[i];			
+                     html += '<div class="rss0l"><a href="' + entry.link + '">' + entry.title + '</a></div>';}         
+                    container.innerHTML = html;}});}
+            google.setOnLoadCallback(initialize);
+        </script>
+        <div id="rss01"></div>
+        
+
+
+    <script  language="JavaScript">
+        //document.body.style.backgroundColor = '#000';
+        function mueveReloj() {
+            momentoActual = new Date();
+            hora = momentoActual.getHours();
+            minuto = momentoActual.getMinutes();
+            segundo = momentoActual.getSeconds();
+            fechaini = new Date('2018-04-01').getTime();
+            dif = momentoActual - fechaini;
+            
+            var segs = 1000;
+            var mins = segs * 60;
+            var hours = mins * 60;
+            var days = hours * 24;
+            var months = days * 30.416666666666668;
+            var years = months * 12;
+
+            //calculo 
+            var anos = Math.floor(dif / years);
+
+            dif = dif - (anos * years);
+            var meses = Math.floor(dif / months)
+
+            dif = dif - (meses * months);
+            var dias = Math.floor(dif / days)
+
+            dif = dif - (dias * days);
+            var horas = Math.floor(dif / hours)
+
+            dif = dif - (horas * hours);
+            var minutos = Math.floor(dif / mins)
+
+            dif = dif - (minutos * mins);
+            var segundos = Math.floor(dif / segs)
+            var etiqueta = ` ${anos} años, ${meses} meses,  ${dias} dias, ${horas} horas, ${minutos} minutos`;
+            //console.log(`Han pasado ${anos} años, ${meses} meses,  ${dias} dias, ${horas} horas, y ${minutos} minutos desde que naciste. Ya chocheas...!!`)
+            //document.write('label class="">' + anos + ' Años');
+            document.getElementById('diffechas').innerHTML= etiqueta;
+            horaImprimible = zfill(hora, 2) + " : " + zfill(minuto, 2) + " : " + zfill(segundo, 2)
+
+            document.form_reloj.reloj.value = horaImprimible
+            //document.getElementById("clock").value = horaImprimible
+            setTimeout("mueveReloj()", 1000)
+            
+        }
+
+        function zfill(number, width) {
+        var numberOutput = Math.abs(number); /* Valor absoluto del número */
+        var length = number.toString().length; /* Largo del número */ 
+        var zero = "0"; /* String de cero */  
+        
+        if (width <= length) {
+            if (number < 0) {
+                return ("-" + numberOutput.toString()); 
+            } else {
+                return numberOutput.toString(); 
+            }
+        } else {
+            if (number < 0) {
+                return ("-" + (zero.repeat(width - length)) + numberOutput.toString()); 
+            } else {
+                return ((zero.repeat(width - length)) + numberOutput.toString()); 
+            }
+        }
+        }
+        
+        function RunFile() {
+            WshShell = new ActiveXObject("WScript.Shell");
+            WshShell.Run("c:/windows/system32/notepad.exe", 1, false);
+        }
+
+    </script>
+    <!-- <style type="text/css">
+        html, body, div, iframe { margin:0; padding:0; height:100%; }
+        iframe { display:block; width:100%; border:none; }
+    </style> -->
+    <script src="./js/jquery-3.4.1.slim.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    
+  </body>
+</html>

@@ -8,16 +8,83 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <title>Marcelo</title>
+    <link rel="icon" type="image/jpg" href="images/icono-mundo-abstracto_1284-3672.jpg" />
+    <link rel="stylesheet" href="icon/style.css">
+    <link rel="stylesheet" href="css/estilos.css">
+
   </head>
   <body onload="mueveReloj()">
-    <h1 class="float-right">MARCELO</h1>
+    <!-- <h1 class="float-left">MARCELO</h1> -->
+    <!-- Comienzo del Menu -->
     
-    <a href="https://www.google.com.ar">GOOGLE</a>
+    <header>
+        <div class="container-header">
+            <div class="container-logo-title">
+                <img src="" alt="">
+                <h1>MARCELO</h1>
+            </div>
+
+            <div class="container-menu">
+               <label class="icon-menu"></label>
+                <nav class="menu">
+                    <ul>
+                        <li><label class="icon-home"></label><span class="icon-triangle-down icon2"></span>
+
+                            <ul>
+                                <li><span class="icon-chevron-small-right"></span> Diseño grafico</li>
+                                <li><span class="icon-chevron-small-right"></span> Desarrollo web
+
+                                    <ul>
+                                        <li><span class="icon-chevron-small-right"></span> Diseño grafico</li>
+                                        <li><span class="icon-chevron-small-right"></span> Desarrollo web</li>
+                                        <li><span class="icon-chevron-small-right"></span> Programacion de sistemas</li>
+                                        <li><span class="icon-chevron-small-right"></span> Tecnico computacional</li>
+                                        <li><span class="icon-chevron-small-right"></span> Administracion de redes</li>
+                                        <li><span class="icon-chevron-small-right"></span> Discurso</li>
+                                    </ul>
+
+                                </li>
+                                <li><span class="icon-chevron-small-right"></span> Programacion de sistemas</li>
+                                <li><span class="icon-chevron-small-right"></span> Tecnico computacional</li>
+                                <li><span class="icon-chevron-small-right"></span> Administracion de redes</li>
+                                <li><span class="icon-chevron-small-right"></span> Discurso</li>
+                            </ul>
+
+                        </li>
+                        <li>PAGINAS <span class="icon-triangle-down"></span></li>
+                        <li>BUSQUEDAS <span class="icon-triangle-down"></span>
+
+                            <ul>
+                                <li><span class="icon-chevron-small-right"></span> <a href="https://www.google.com.ar">Google</a></li>
+                                <li><span class="icon-chevron-small-right"></span> Desarrollo web</li>
+                                <li><span class="icon-chevron-small-right"></span> Programacion de sistemas</li>
+                                <li><span class="icon-chevron-small-right"></span> Tecnico computacional</li>
+                                <li><span class="icon-chevron-small-right"></span> Administracion de redes</li>
+                                <li><span class="icon-chevron-small-right"></span> Discurso</li>
+                            </ul>
+
+                        </li>
+                        <li>SHOP <span class="icon-triangle-down"></span></li>
+                        <li>ELEMENTS <span class="icon-triangle-down"></span></li>
+                        <li>MEGA MENU <span class="icon-triangle-down"></span></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Fin del Menu -->
+
+
+
+
+    <!-- <a href="https://google.com.ar" class="float-right button btn btn-primary">Google</a> -->
+    
     
     <form name="form_reloj">
         <input type="text" name="reloj" size="10">
-        
-        
+        <!-- <button onclick="RunFile">Notepad</button>
+        <a href="C:\windows\system32\notepad.exe">link</a> -->
     </form>
     <div >
 
@@ -25,66 +92,26 @@
 
             <div class="panel-group" id="accordion" style="float: left; width: 220px;">
                 <div class="panel panel-info">
-                    
+                    <!--DATOS PERSONA-->
                     <div class="panel-heading">
                         <h3 class="panel-title">
-                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse0">Mapa</a>
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse0">Pagina</a>
                         </h3>
 
                     </div>
                     <div id="collapse0" class="panel-collapse collapse in" style="float: right; width: 220px;background-color:chocolate;">
                         <div class="panel panel-info ">
-                            
-                            <div>
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d13130.711243324875!2d-58.4344577!3d-34.6375814!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sar!4v1579443193362!5m2!1ses!2sar" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-                            </div>
-                            
-                            <!-- <div> insertar un video 
-
-                                <object
-                                    type="application/x-shockwave-flash"
-                                    data="https://www.youtube.com/v/vZV-t3KzTpw"
-                                    style="width: 425px; height:350px;">
-                                    <param
-                                        name="movie"
-                                        value="https://www.youtube.com/v/vZV-t3KzTpw">
-                                    ERROR (no puede mostrarse el objeto)
-                                </object>
-                            </div> -->
-                     
+                            <iframe id="content" src="https://www.clarin.com/tema/ultimas-noticias.html" allowtransparency="1" 
+                                scrolling="yes"  frameborder="0"
+                                style="margin:0; padding:0; height:100%;display:block; width:100%; border:none;"> No Soporta iFrames</iframe>
                         </div>
-
                     </div>
                 </div>
 
             </div>
-            <div>
-                <iframe id="climacontent" src="https://www.accuweather.com/es/ar/buenos-aires/7894/current-weather/7894" frameborder="0"></iframe>
-            </div>
 
-            <div>
-                <a href="http://www.thumbshots.com" target="_blank" title="This site uses Thumbshots previews">This site uses Thumbshots previews</a>
-
-
-
-
-                <img src="http://open.thumbshots.org/image.aspx?url=<?echo urlencode("http://www.guiarte.com/");?>" width=120 height=90 />
-            </div>
-            
-            <div id="destino"></div>
-            <button onclick="cargar()"></button>
-            <script>
-                function cargar(){
-                    var elclima = document.getElementById("climacontent").innerHTML;
-                    var elem = document.getElementById('destino');
-                    elem.innerHTML = elclima.document.getElementsByClassName("temperatures")[1].innerHTML;
-                    
-                }
+           
                 
-                
-                
-            </script>
-
             <div class="panel-group" id="accordion" style="float: right; width: 220px;">
                 <div class="panel panel-info">
                     <!--DATOS PERSONA-->
@@ -127,37 +154,52 @@
                         </div>
                     </div>
                 </div>
+                
+            </div>
+            
+        </div>
+        <div class="row ">
+            <div style="width: 200px; height: 150px;" class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse5">
+                <iframe id="iframe"  src="http://www.clarin.com" ></iframe>
+            </div>
+            <div style="width: 2000px; height: 1600px;" id="collapse5" class="panel-collapse collapse in" style="float: right; width: 220px;background-color:chocolate;">
+                <div class="panel panel-info ">
+                    <iframe id="iframe2"  src="http://www.clarin.com" ></iframe>
+                </div>
+            </div>
+            <div style="width: 200px; height: 150px;" >
+                <iframe id="iframe"  src="http://www.minutouno.com" ></iframe>
+            </div>
+            <div style="width: 200px; height: 150px;" >
+                <iframe id="iframe" src="https://www.infobae.com/ultimas-noticias/" ></iframe>
             </div>
         </div>
-    </div>
 
-
-    <style type="text/css">
-        #rss01{width:300px;border-radius:8px;padding:10px;background-color:white;border:2px solid #d4eefd;margin-bottom:1em;margin:6px 0 12px 0;font-size:0.8em;line-height:18px;}
-        #rss01 a{color:#666666;font-weight:bold;}
-        .rss0l {padding:0 0 8px 0;text-align:left;}
-        </style>
-        <script type="text/javascript">
-        google.load('feeds', '1');
-            function initialize() {
-              var feed = new google.feeds.Feed("http://norfipc.com/rss.xml");
-              //feed.setNumEntries(10); //mostrar 10 publicaciones
-              feed.load(function(result) {
-                if (!result.error) {
-                  var container = document.getElementById("rss01");
-                  var html = '';
-                  for (var i = 0; i < result.feed.entries.length; i++) {
-                    var entry = result.feed.entries[i];			
-                     html += '<div class="rss0l"><a href="' + entry.link + '">' + entry.title + '</a></div>';}         
-                    container.innerHTML = html;}});}
-            google.setOnLoadCallback(initialize);
-        </script>
-        <div id="rss01"></div>
+        <div class="row">
+            <div class="col-md-1">
+                <a href="file:///a.docx" type="button" class="btn btn-link btn-sm" target="ventana_iframe">Minuto 1</a>
+            </div>
+            <div class="col-md-1">
+                <p><a href="http://www.clarin.com" type="button" class="btn btn-link btn-sm" target="ventana_iframe">Clarin</a></p>
+            </div>
+            <div class="col-md-1">
+                <p><a href="http://www.infobae.com" type="button" class="btn btn-link btn-sm" target="ventana_iframe">Infobae</a></p>
+            </div>
+            
+            
+            
+        </div>
+        <iframe src="http://www.minutouno.com" 
+        marginwidth="0" marginheight="0" name="ventana_iframe" scrolling="yes" border="0" 
+        frameborder="0" width="800" height="600">
+        </iframe>
         
-
-
+      
+    </div>
+    
+    
     <script  language="JavaScript">
-        //document.body.style.backgroundColor = '#000';
+        document.body.style.backgroundColor = '#000';
         function mueveReloj() {
             momentoActual = new Date();
             hora = momentoActual.getHours();
@@ -235,6 +277,33 @@
     <script src="./js/jquery-3.4.1.slim.min.js"></script>
     <script src="./js/popper.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
-    
+    <script src="js/jquery.js"></script>
+    <script src="./js/script.js"></script>
+    <style>
+        #iframe {
+        width: 800px;
+        height: 600px;
+        border: none;
+        -moz-transform: scale(0.2);
+        -moz-transform-origin: 0 0;
+        -o-transform: scale(0.2);
+        -o-transform-origin: 0 0;
+        -webkit-transform: scale(0.2);
+        -webkit-transform-origin: 0 0;
+        overflow: hiden;
+        }
+
+        #iframe2 {
+        width: 3000px;
+        height: 2600px;
+        border: none;
+        -moz-transform: scale(0.2);
+        -moz-transform-origin: 0 0;
+        -o-transform: scale(0.2);
+        -o-transform-origin: 0 0;
+        -webkit-transform: scale(0.2);
+        -webkit-transform-origin: 0 0;
+        overflow: hiden;
+    </style>
   </body>
 </html>
